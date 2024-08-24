@@ -37,23 +37,25 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <BrowserRouter>
-        <DrawerAppBar toggleMode={toggleMode} />
-        <Routes>
-          <Route
-            path="/"
-            element={<SignUp mode={mode} screenWidth={screenWidth} />}
-          />
-          <Route
-            path="/:id"
-            element={<SignUp mode={mode} screenWidth={screenWidth} />}
-          />
-          {/* Add more routes as needed */}
-        </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <>
+          <DrawerAppBar toggleMode={toggleMode} />
+          <Routes>
+            <Route
+              path="/"
+              element={<SignUp mode={mode} screenWidth={screenWidth} />}
+            />
+            <Route
+              path="/reset/:id"
+              element={<SignUp mode={mode} screenWidth={screenWidth} />}
+            />
+            {/* Add more routes as needed */}
+          </Routes>
+        </>
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 
