@@ -47,7 +47,7 @@ function App() {
             element={<SignUp mode={mode} screenWidth={screenWidth} />}
           />
           <Route
-            path="/:id"
+            path="/Reset/:id"
             element={<SignUp mode={mode} screenWidth={screenWidth} />}
           />
           {/* Add more routes as needed */}
