@@ -40,10 +40,13 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <BrowserRouter>
-        <DrawerAppBar toggleMode={toggleMode} />
         <Routes>
+           <Route
+            path="/"
+            element={<DrawerAppBar toggleMode={toggleMode} />}
+          />
           <Route
-            path="/edit/:id"
+            path="/edit"
             element={<SignUp mode={mode} screenWidth={screenWidth} />}
           />
           {/* Add more routes as needed */}
