@@ -49,7 +49,7 @@ const CssTextField = styled(TextField)(({ theme }) => ({
 
 const SignUp = ({ mode, screenWidth }) => {
       const { id } = useParams();
-      console.log(id)
+      //console.log(id)
   const [
     regPassword,
     showPassword,

@@ -45,7 +45,7 @@ const SignUpFunc = (id) => {
       token:id,
     };
     setLoading(true);
-    console.log(NewData);
+    //console.log(NewData);
     await dispatch(UpdatePasswordFunction(NewData));
     setLoading(false);
     setIsSubmitted(true);
@@ -56,16 +56,16 @@ const SignUpFunc = (id) => {
   res = useSelector((state) => state.AuthReducer.UpdatePass);
   useEffect(() => {
     if (loading === false && isSubmitted === true) {
-      console.log(res);
+      //console.log(res);
       if (res && res.status === 200) {
         notify("Your Pass Updated successfully", "success");
-        console.log(res);
+        //console.log(res);
         // setTimeout(() => {
         //   navigate("/login");
         // }, 2500);
       }
       if (res.response) {
-        notify("You can not register using this email", "error");
+        notify("your session is expired", "error");
       }
       setIsSubmitted(false); // Reset the flag when component re-renders
     }
