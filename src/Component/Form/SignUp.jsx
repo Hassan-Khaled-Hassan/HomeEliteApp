@@ -76,7 +76,6 @@ const SignUp = ({ mode, screenWidth }) => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
         backgroundSize: "cover",
-        mt: 14,
       }}
     >
       <Container
@@ -134,7 +133,7 @@ const SignUp = ({ mode, screenWidth }) => {
                 src={image}
                 alt="logo"
                 style={{
-                  height: "369px",
+                  height: "245px",
                   width: "100%",
                 }}
               />
